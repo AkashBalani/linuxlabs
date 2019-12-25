@@ -4,3 +4,4 @@
   gather_facts: True
   roles:
   - create_s3
+  - read_s3

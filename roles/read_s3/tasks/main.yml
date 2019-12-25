@@ -1,0 +1,7 @@
+---
+- name: Create s3 bucket
+  aws_s3_bucket_facts:
+    region: "us-east-1"
+    aws_access_key: "{{ lookup('env','aws_access_key') }}"
+    aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
+  register: s3_url
