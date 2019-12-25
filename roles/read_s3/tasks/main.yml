@@ -1,5 +1,5 @@
 ---
-- name: Create s3 bucket
+- name: Read All S3 bucjets
   aws_s3_bucket_facts:
     region: "us-east-1"
     aws_access_key: "{{ lookup('env','aws_access_key') }}"
