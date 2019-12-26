@@ -1,0 +1,13 @@
+---
+# tasks file for create_vpc
+- name: Create new VPC
+  ec2_vpc_net:
+    name: my_new_vpc
+    state: present
+    cidr_block: 172.23.0.0/16
+    region: us-east-1
+  register: vpc_register
+
+- name: Set Facts
+  set_fact: 
+    some_fact = vpc_register
