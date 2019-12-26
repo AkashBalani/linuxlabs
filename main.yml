@@ -3,5 +3,6 @@
   connection: local
   gather_facts: True
   roles:
-  - create_s3
-  - read_s3
+  - create_ec2
+  #- create_s3
+  #- read_s3

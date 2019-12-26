@@ -1,0 +1,10 @@
+---
+- name: Create s3 bucket
+  ec2:
+    key_name: robust.pem.txt
+    instance_type: t2.micro
+    image: ami-123456  ##Need to add a Ubuntu or CentOS image
+    wait: yes
+    count: 1
+    vpc_subnet_id: subnet-29e63245  ##Need to change this too
+    assign_public_ip: yes
