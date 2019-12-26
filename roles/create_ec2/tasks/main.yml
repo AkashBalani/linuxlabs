@@ -1,0 +1,10 @@
+---
+- name: Create s3 bucket
+  ec2:
+    key_name: "aws-private.pem" # This is now the dynamically created key
+    instance_type: t2.micro
+    image: ami-123456  ##Need to add a Ubuntu or CentOS image
+    wait: yes
+    count: 1
+    vpc_subnet_id: subnet-29e63245  ##Could use default vpc or create a new vpc
+    assign_public_ip: yes
