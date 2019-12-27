@@ -11,3 +11,10 @@
 - name: Set Facts
   set_fact: 
     some_fact = vpc_register
+
+# - name: Get VPC info
+#   ec2_vpc_subnet_info:
+#     filters:
+#       vpc-id: vpc_register.vpc
+
+## Need to get vpc_subnet_id from this output
