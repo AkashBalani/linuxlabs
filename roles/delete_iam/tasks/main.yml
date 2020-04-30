@@ -1,0 +1,11 @@
+---
+- name: Deletes IAM Users
+  iam: 
+    iam_type: user
+    name: "{{ item }}"
+    state: absent
+    password: "{{ temp_pass }}"
+    # access_key_state: create
+  loop:
+    - jcleese
+    - mpython

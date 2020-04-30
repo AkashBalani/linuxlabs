@@ -1,0 +1,11 @@
+---
+- name: Demo of IAM role
+  iam: 
+    iam_type: user
+    name: "{{ item }}"
+    state: present
+    password: "{{ temp_pass }}"
+    access_key_state: create
+  loop:
+    - jcleese
+    - mpython
