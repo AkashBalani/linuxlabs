@@ -1,0 +1,11 @@
+---
+# tasks file for create_iam_policy
+- name: Demos how to attach a policy to a IAM User/Group
+  iam_policy:
+    iam_type: user
+    iam_name: "{{ item }}"
+    policy_name: adminPolicy
+    state: present
+    policy_document: /Users/akashbalani/Documents/linuxlabs/linuxlabs/roles/create_iam_policy/templates/admin.json
+  loop:
+    - "{{ iam_user }}"

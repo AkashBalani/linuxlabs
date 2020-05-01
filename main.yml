@@ -10,6 +10,8 @@
   roles:
   #- create_vpc
   #- create_ec2_keypair
-  - create_ec2
+  - iam
+  - create_iam_policy
+  # - delete_iam
   #- create_s3
   #- read_s3

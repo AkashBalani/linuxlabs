@@ -9,3 +9,11 @@
   loop:
     - jcleese
     - mpython
+  register: iam_output
+
+- name: Display s3 url
+  debug: var=iam_output
+
+- name: Set Facts
+  set_fact:
+    iam_user: "{{ iam_output.results.[0].item }}" # this right now is only capable of handling one result, trying to make an array out of it
